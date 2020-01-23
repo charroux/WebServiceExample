@@ -8,12 +8,16 @@ Ajouter la librairie au dependencies :
 
 implementation('org.springframework.boot:spring-boot-starter-data-mongodb')
 
+https://github.com/charroux/WebServiceExample/blob/master/build.gradle
+
 Valider les changements => import changes (Intellij)
 
 ## Customiser la classe Car pour la rendre persistante
 
 Ajouyter org.springframework.data.annotation.Id au champs plateNumber
 Ajouter org.springframework.data.mongodb.core.mapping.Document à la classe Car
+
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/Car.java
 
 ## Customiser le Web Service pour enregistrer et cherche des données
 
@@ -24,6 +28,7 @@ Créer une interface :
 public interface CarRepository extends CrudRepository<Car,String> {
 
 }
+
 
 Ajouter l'accès au repository dans le web service et modifier le constructeur du web service pour qu'il récupère les données dans la base :
 
