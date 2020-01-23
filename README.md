@@ -14,7 +14,8 @@ Valider les changements => import changes (Intellij)
 
 ## Customiser la classe Car pour la rendre persistante
 
-Ajouyter org.springframework.data.annotation.Id au champs plateNumber
+Ajouter org.springframework.data.annotation.Id au champs plateNumber
+
 Ajouter org.springframework.data.mongodb.core.mapping.Document à la classe Car
 
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/Car.java
@@ -28,6 +29,10 @@ Créer une interface :
 public interface CarRepository extends CrudRepository<Car,String> {
 
 }
+
+Spring va implanter automatiquement cette interface. Vous bénéficierez alors des méthodes issues de CrudRepository : 
+
+https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
 
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepository.java
 
