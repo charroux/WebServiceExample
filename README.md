@@ -35,14 +35,6 @@ Ajouter l'accès au repository dans le web service et modifier le constructeur d
 
 	@Autowired
 	CarRepository carRepository;
-	
-	public CarRentalService() {
-
-		Iterable<Car> allCarJPA = carRepository.findAll();
-		for (Car c: allCarJPA) {
-			System.out.println(c);
-		}
-    }
     
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRentalService.java
 
