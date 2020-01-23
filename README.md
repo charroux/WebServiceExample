@@ -30,11 +30,11 @@ public interface CarRepository extends CrudRepository<Car,String> {
 
 }
 
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepository.java
+
 Spring va implanter automatiquement cette interface. Vous bénéficierez alors des méthodes issues de CrudRepository : 
 
 https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
-
-https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepository.java
 
 Ajouter l'accès au repository dans le web service et modifier le constructeur du web service pour qu'il récupère les données dans la base :
 
