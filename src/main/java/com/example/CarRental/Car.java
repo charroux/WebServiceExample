@@ -1,10 +1,13 @@
 package com.example.CarRental;
 
+import java.util.ArrayList;
+
 public class Car {
 	
 	private String plateNumber;
 	private String brand;
 	private int price;
+	private ArrayList<Dates> dates = new ArrayList<Dates>();
 	
 	public Car() {
 		super();
@@ -16,7 +19,15 @@ public class Car {
 		this.brand = brand;
 		this.price = price;
 	}
-	
+
+	public ArrayList<Dates> getDates() {
+		return dates;
+	}
+
+	public void setDates(ArrayList<Dates> dates) {
+		this.dates = dates;
+	}
+
 	public String getPlateNumber() {
 		return plateNumber;
 	}

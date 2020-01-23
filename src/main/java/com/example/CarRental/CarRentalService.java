@@ -42,4 +42,28 @@ public class CarRentalService {
 		return null;
 	}
 
+	@RequestMapping(value = "/cars/{plateNumber}", method = RequestMethod.PUT)
+	@ResponseStatus(HttpStatus.OK)
+	public Car rentCar(@PathVariable(value = "plateNumber") String plateNumber,
+					   @RequestParam(value = "rent") boolean rent,
+					   @RequestBody Dates dates){
+		for(Car car: cars){
+			if(car.getPlateNumber().equals(plateNumber)){
+				if(rent == true){
+					car.getDates().add(dates);
+				} else {
+					car.getDates().remove(dates);
+				}
+				return car;
+			}
+		}
+		/*Car c = cars.stream().filter(car -> car.getPlateNumber().equals(plateNumber)).findFirst().orElse(null);
+		if(rent == true){
+			c.getDates().add(dates);
+		} else {
+			c.getDates().remove(dates);
+		}*/
+		return null;
+	}
+
 }
