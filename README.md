@@ -29,6 +29,7 @@ public interface CarRepository extends CrudRepository<Car,String> {
 
 }
 
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepository.java
 
 Ajouter l'accès au repository dans le web service et modifier le constructeur du web service pour qu'il récupère les données dans la base :
 
@@ -43,7 +44,7 @@ Ajouter l'accès au repository dans le web service et modifier le constructeur d
 		}
     }
     
-Utiliser l'interface dans le web service:
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRentalService.java
 
 
 ## Tester
