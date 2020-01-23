@@ -2,7 +2,9 @@ package com.example.CarRental;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.http.HttpStatus;
@@ -10,10 +12,20 @@ import org.springframework.stereotype.Controller;
 
 @RestController
 public class CarRentalService {
-	
+
 	private List<Car> cars = new ArrayList<Car>();
-	
+
+
+	@Autowired
+	CarRepository carRepository;
+
 	public CarRentalService() {
+
+		Iterable<Car> allCarJPA = carRepository.findAll();
+		for (Car c: allCarJPA) {
+			System.out.println(c);
+		}
+
 		cars.add(new Car("11AA22", "Ferrari", 1000));
 		cars.add(new Car("33BB44", "Porshe", 2222));
 	}

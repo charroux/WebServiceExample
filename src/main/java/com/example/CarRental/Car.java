@@ -1,9 +1,14 @@
 package com.example.CarRental;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
+@Document
 public class Car {
-	
+
+	@Id
 	private String plateNumber;
 	private String brand;
 	private int price;
