@@ -32,6 +32,7 @@ public class CarRentalService {
 	public void addCar(@RequestBody Car car) throws Exception{
 		System.out.println(car);
 		cars.add(car);
+		carRepository.save(car);
 	}
 
 	@RequestMapping(value = "/cars/{plateNumber}", method = RequestMethod.GET)
