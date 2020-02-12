@@ -12,6 +12,8 @@ https://github.com/charroux/WebServiceExample/blob/master/build.gradle
 
 Valider les changements => import changes (Intellij)
 
+Sous Eclipse : clic droit projet -> gradle -> update
+
 ## Customiser la classe Car pour la rendre persistante
 
 Ajouter org.springframework.data.annotation.Id au champs plateNumber
