@@ -1,6 +1,7 @@
 package com.example.CarRental;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 
 @Entity
@@ -10,6 +11,8 @@ public class CarSQL {
 	private String plateNumber;
 	private String brand;
 	private int price;
+
+	@Transient
 	private ArrayList<Dates> dates = new ArrayList<Dates>();
 
 	public CarSQL() {

@@ -71,6 +71,8 @@ https://github.com/charroux/WebServiceExample/blob/master/build.gradle
 
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarSQL.java
 
+Ajouter @Transient pour l'association dates afin d'éviter la création d'une table Dates
+
 ## Creer une interface Repository pour accéder à la base SQL
 
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepositorySQL.java
