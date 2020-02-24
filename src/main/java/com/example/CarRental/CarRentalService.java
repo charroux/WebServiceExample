@@ -36,7 +36,8 @@ public class CarRentalService {
 		System.out.println(car);
 		cars.add(car);
 		carRepository.save(car);
-		carRepositorySQL.save(car);
+		CarSQL carSQL = new CarSQL(car.getPlateNumber(), car.getBrand(), car.getPrice());
+		carRepositorySQL.save(carSQL);
 	}
 
 	@RequestMapping(value = "/cars/{plateNumber}", method = RequestMethod.GET)

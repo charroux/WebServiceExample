@@ -69,7 +69,7 @@ https://github.com/charroux/WebServiceExample/blob/master/build.gradle
 
 ## Créer un nouvelle classe CarSQL et ajoutez-y les annotations @Entity et @Id
 
-https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/Car.java
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarSQL.java
 
 ## Creer une interface Repository pour accéder à la base SQL
 
@@ -82,6 +82,8 @@ https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/exam
 ## Vérifier le contenu de la base
 
 Ajouter spring.h2.console.enabled=true au fichier application.properties
+
+https://github.com/charroux/WebServiceExample/blob/master/src/main/resources/application.properties
 
 Open the H2 web console: http://localhost:8080/h2-console
 
