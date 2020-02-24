@@ -1,14 +1,16 @@
 package com.example.CarRental;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Entity;
 import java.util.ArrayList;
 
 @Document
+@Entity
 public class Car {
 
-	@Id
+	@org.springframework.data.annotation.Id
+	@javax.persistence.Id
 	private String plateNumber;
 	private String brand;
 	private int price;

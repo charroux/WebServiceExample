@@ -58,3 +58,28 @@ cd C:\Program Files\MongoDB\Server\4.2\bin
 
 mongod --dbpath C:\data\db
 
+# Ajouter une base SQL 
+
+## Ajouter les librairies pour la base H2 à build.gradle 
+
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	runtime("com.h2database:h2")
+
+https://github.com/charroux/WebServiceExample/blob/master/build.gradle
+
+## Customiser la classe Car pour la renndre persistante avec @Entity et @Id
+
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/Car.java
+
+## Creer une interface Repository pour accéder à la base SQL
+
+## Utiliser l'interface dans le Web Service
+
+## Vérifier le contenu de la base
+
+Ajouter spring.h2.console.enabled=true au fichier application.properties
+
+Open the H2 web console: http://localhost:8080/h2-console
+
+In the login page make sure that you use jdbc:h2:mem:testdb as JDBC URL and org.h2.Driver as the Driver class.
+

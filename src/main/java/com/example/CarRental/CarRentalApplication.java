@@ -13,7 +13,11 @@ public class CarRentalApplication {
 
 		CarRepository carRepository = (CarRepository)context.getBean("carRepository");
 
-		Car car = new Car("11AA22", "Lamborgini", 1000);
+		Car car = new Car("22CC33", "Peugeot", 1000);
+		Dates date = new Dates();
+		date.setDebut("10/10/2022");
+		date.setFin("10/11/2022");
+		car.getDates().add(date);
 		carRepository.save(car);
 
 

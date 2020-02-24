@@ -16,15 +16,18 @@ public class CarRentalService {
 	@Autowired
 	CarRepository carRepository;
 
+	@Autowired
+	CarRepositorySQL carRepositorySQL;
+
 	public CarRentalService(){
-		cars.add(new Car("AA1122", "Ferrari", 1000));
-		cars.add(new Car("BB22CC", "Peugeot", 1000));
+		/*cars.add(new Car("AA1122", "Ferrari", 1000));
+		cars.add(new Car("BB22CC", "Peugeot", 1000));*/
 	}
 
 	@RequestMapping(value="/cars", method=RequestMethod.GET) 
 	@ResponseStatus(HttpStatus.OK) 
-	public List<Car> getListOfCars(){
-		return cars;
+	public Iterable<Car> getListOfCars(){
+		return carRepository.findAll();
 	}
 	
 	@RequestMapping(value = "/cars", method = RequestMethod.POST)
@@ -33,6 +36,7 @@ public class CarRentalService {
 		System.out.println(car);
 		cars.add(car);
 		carRepository.save(car);
+		carRepositorySQL.save(car);
 	}
 
 	@RequestMapping(value = "/cars/{plateNumber}", method = RequestMethod.GET)
@@ -51,7 +55,7 @@ public class CarRentalService {
 	@RequestMapping(value = "/cars/{plateNumber}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.OK)
 	public Car rentCar(@PathVariable(value = "plateNumber") String plateNumber,
-					   @RequestParam(value = "rent") boolean rent,
+					   @RequestParam(value = "rent", required = false) boolean rent,
 					   @RequestBody Dates dates){
 		for(Car car: cars){
 			if(car.getPlateNumber().equals(plateNumber)){
