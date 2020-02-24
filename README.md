@@ -67,7 +67,7 @@ mongod --dbpath C:\data\db
 
 https://github.com/charroux/WebServiceExample/blob/master/build.gradle
 
-## Customiser la classe Car pour la renndre persistante avec @Entity et @Id
+## Créer un nouvelle classe CarSQL et ajoutez-y les annotations @Entity et @Id
 
 https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/Car.java
 

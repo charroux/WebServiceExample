@@ -1,23 +1,22 @@
 package com.example.CarRental;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
+import javax.persistence.Entity;
 import java.util.ArrayList;
 
-@Document
-public class Car {
+@Entity
+public class CarSQL {
 
-	@org.springframework.data.annotation.Id
+	@javax.persistence.Id
 	private String plateNumber;
 	private String brand;
 	private int price;
 	private ArrayList<Dates> dates = new ArrayList<Dates>();
-	
-	public Car() {
+
+	public CarSQL() {
 		super();
 	}
-	
-	public Car(String plateNumber, String brand, int price) {
+
+	public CarSQL(String plateNumber, String brand, int price) {
 		super();
 		this.plateNumber = plateNumber;
 		this.brand = brand;

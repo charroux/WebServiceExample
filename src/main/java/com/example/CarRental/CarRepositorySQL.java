@@ -2,5 +2,5 @@ package com.example.CarRental;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface CarRepositorySQL extends CrudRepository<Car, String> {
+public interface CarRepositorySQL extends CrudRepository<CarSQL, String> {
 }
