@@ -73,7 +73,11 @@ https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/exam
 
 ## Creer une interface Repository pour accéder à la base SQL
 
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRepositorySQL.java
+
 ## Utiliser l'interface dans le Web Service
+
+https://github.com/charroux/WebServiceExample/blob/master/src/main/java/com/example/CarRental/CarRentalService.java
 
 ## Vérifier le contenu de la base
 
